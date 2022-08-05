@@ -56,7 +56,7 @@ if($query)
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images/home-img.png" class="d-block w-100" alt="...">
+      <img src="images/home-img1.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       <p style="font-weight: bolder;font-size:2rem;">FRESHNESS STORE</p>
         <p>Discover your everyday needs under one place </p>
