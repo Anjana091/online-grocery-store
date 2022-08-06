@@ -82,7 +82,7 @@ if(isset($_POST['login']))
 <input type="password" class="form-control" id="password" value="" name="password" required="true" placeholder="Password">
 <h6 style="padding-top: 20px"><a href="forgot-password.php">Forgot Password?</a></h6> 
                                     </div>
-                                    
+                                    <div><h6 style="padding-top: 20px"><a href="admin/index.php">Admin login?</a></h6> </div>
                                       </div>                              
                                  
                                  <div class="row">
