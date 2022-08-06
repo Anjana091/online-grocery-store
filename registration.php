@@ -9,6 +9,11 @@ if(isset($_POST['submit']))
     $contno=$_POST['mobilenumber'];
     $email=$_POST['email'];
     $password=md5($_POST['password']);
+    $fnaobno=$_POST['flatnumber'];
+    $street=$_POST['streetn'];
+   $area=$_POST['arean'];
+   $lndmark=$_POST['landmarkn'];
+   $city=$_POST['cityn'];
 
     $ret=mysqli_query($con, "select Email from tbluser where Email='$email' || MobileNumber='$contno'");
     $result=mysqli_fetch_array($ret);
@@ -16,7 +21,7 @@ if(isset($_POST['submit']))
 $msg="This email or Contact Number already associated with another account";
     }
     else{
-    $query=mysqli_query($con, "insert into tbluser(FirstName, LastName, MobileNumber, Email, Password) value('$fname', '$lname','$contno', '$email', '$password' )");
+    $query=mysqli_query($con, "insert into tbluser(FirstName, LastName, MobileNumber, Email, Password, flatbldgnumber, streename, area ,landmark, city) value('$fname', '$lname','$contno', '$email', '$password','$fnaobno', '$street', '$area', '$lndmark','$city ')");
     if ($query) {
     $msg="You have successfully registered";
   }
@@ -117,6 +122,26 @@ return true;
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputPassword1"></label>
                                        <input type="password" class="form-control" id="repeatpassword"  placeholder="Repeat password" value="" name="repeatpassword" required="true"> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label for="exampleInputEmail1"></label>
+                                       <input class="form-control" type="text" value="" placeholder="Flat/Building No" id="flatnumber" name="flatnumber" required="true"> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label for="exampleInputEmail1"></label>
+                                       <input class="form-control" type="text" value="" placeholder="streetname" id="streetn" name="streetn" required="true"> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label for="exampleInputEmail1"></label>
+                                       <input class="form-control" type="text" value="" placeholder="area" id="arean" name="arean" required="true"> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label for="exampleInputEmail1"></label>
+                                       <input class="form-control" type="text" value="" placeholder="landmark" id="landmarkn" name="landmarkn" required="true"> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label for="exampleInputEmail1"></label>
+                                       <input class="form-control" type="text" value="" placeholder="city" id="cityn" name="cityn" required="true"> 
                                     </div>
                                                                      </div>
                                  <br>
